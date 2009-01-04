@@ -8,7 +8,7 @@ ProjectGenerator is a command-line program, which can create set of files and di
 =How it work?=
 ProjectGenerator recursievly process the _template_ directory and create files/dirs in _target_ directory (see CommandLine).
 
-Every file contens is processed by template engine (see below).
+Every template file is processed by template engine (see below).
 
 File- and directory- template names may contain macro-substitutions (see below).
 
