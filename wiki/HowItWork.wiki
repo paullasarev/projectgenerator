@@ -6,13 +6,13 @@
 ProjectGenerator is a command-line program, which can create set of files and directories by template.
 
 =How it work?=
-ProjectGenerator recursievly process the _template_ directory and create files/dirs in target directory (see CommandLine).
+ProjectGenerator recursievly process the _template_ directory and create files/dirs in _target_ directory (see CommandLine).
 
 Every file contens is processed by template engine (see below).
 
 File- and directory- template names may contain macro-substitutions (see below).
 
-Template directory may contain special files *".args.template"* (see below). This file contain variable declarations and procesec specially/
+Template directory may contain special files *".args.template"* (see below). This file contain variable declarations and processed specially.
 
 Target directory may contain special files *".args.cache"* (see below). This file contain cache of previously-generated variables and processes after all.
 
