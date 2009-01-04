@@ -8,13 +8,26 @@ ProjectGenerator is a command-line program, which can create set of files and di
 =How it work?=
 ProjectGenerator recursievly process the _template_ directory and create files/dirs in target directory (see CommandLine).
 
-Every file is processed by template engine (see below).
+Every file contens is processed by template engine (see below).
 
-Directory names in template tree can contain special symbols like {{{$(project).sln}}}. 
+File- and directory- template names may contain macro-substitutions (see below).
 
-During processing the engine substitute this names (here $(project)) whith contents of _variable_ (here *project*)
+Template directory may contain special files *".args.template"* (see below). This file contain variable declarations and procesec specially/
 
-In any template directory may exist special file named *".args.template"*. This file is NOT copy to target dir, but variables, defined  in this file, goes deep in recursion.
+Target directory may contain special files *".args.cache"* (see below). This file contain cache of previously-generated variables and processes after all.
 
 =What is file template?=
 File template is an _any_ file whith some syntax constructions like this:
+
+=What is a file- and directory- name template?=
+Directory names in template tree can contain special symbols like {{{$(project).sln}}}. 
+
+During processing the engine substitute this names (here *$(project)*) whith contents of _variable_ (here *project*).
+
+=What is a special file .args.template?=
+
+In any template directory may exist special file named *".args.template"*. This file is NOT copy to target dir, but variables, defined  in this file, goes deep in recursion.
+
+
+
+=What is a cache file .args.cache?=
