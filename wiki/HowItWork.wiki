@@ -19,6 +19,18 @@ Target directory may contain special files *".args.cache"* (see below). This fil
 =What is file template?=
 File template is an _any_ file whith some syntax constructions like this:
 
+{{{
+<%Argument Name="project" Type="string" %>
+
+project_Guid <% Guid.NewGuid()%>
+
+project_Common_Name <%=project%>.Common
+project_Common_Guid <% Guid.NewGuid()%>
+project_Common_Namespace <%=project%>.Common
+}}}
+
+File content is processed by [http://www.stefansarstedt.com/dievorlagenmaschine_doc.html TemplateMachine engine] and then will be written to target diretory.
+
 =What is a file- and directory- name template?=
 Directory names in template tree can contain special symbols like *$(project).sln*. 
 
