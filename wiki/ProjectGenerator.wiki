@@ -4,7 +4,7 @@ ProjectGenerator is a simple tool for template-based files an directory tree gen
 
 Other software of this category is a [http://www.ericjsmith.net/codesmith/ CodeSmith], but it is not an open project and is too complex for such simple thing.
 
-ProjectGenerator uses wonderful TemplateMachine codegenerator, and extend it's functionality to directory structure.
+ProjectGenerator uses wonderful TemplateMachine code generator, and extend it's functionality to directory structure.
 
 Moreover, ProjectGenerator supply the feature of saving/restoring _variables_ and caching for working in multiple-times usage mode. This helps maintain things like random project GUIDs and saved customisation.
 
