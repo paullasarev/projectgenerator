@@ -2,7 +2,7 @@
 
 <wiki:toc/>
 
-=What is ProjectGenerator?=
+=What is Project Generator?=
 ProjectGenerator is a command-line program, which can create set of files and directories by template.
 
 =How it work?=
@@ -57,3 +57,23 @@ project_Common_Namespace <%=project%>.Common
 
 
 =What is a cache file .args.cache?=
+
+If set command option -cache (see CommandLine), the template engine specially process files named *".args.cache"*  in target directory.
+
+First, this file will be created if it was not exist in every target directory, where in correspond source (template) directory was a file ".args.template". 
+
+The file ".args.cache" will be filled with name/value pairs, generated in ".args.template".
+
+In future engine starts the variables from file ".args.cache" will be read _after_ processing ".args.template" and will overwrite the variable content.
+
+This is very useful, if, for example, we need first time generate some GUID and use it in future generations.
+
+=How will be processed binary files?=
+Binary files in template directory are simply copied to target.
+
+Currently, "binary" means one of extention: .dll .exe .png .jpg .bmp .ico .doc .rtf .xsl
+
+=Will be target files overriden?=
+By default, if target file already exist, it will be skipped.
+
+This behaviour may be changed by option -w (see CommandLine)
