@@ -20,7 +20,7 @@ Target directory may contain special files *".args.cache"* (see below). This fil
 File template is an _any_ file whith some syntax constructions like this:
 
 =What is a file- and directory- name template?=
-Directory names in template tree can contain special symbols like {{{$(project).sln}}}. 
+Directory names in template tree can contain special symbols like *$(project).sln*. 
 
 During processing the engine substitute this names (here *$(project)*) whith contents of _variable_ (here *project*).
 
