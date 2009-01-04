@@ -79,7 +79,7 @@ public class <%=className%>
 
 ===Описание основных видов шаблонов===
 
-||<%@ Assembly Name="System.Xml" %> ||	references and assembly that can be accessed in the current template 
+||<%@ Assembly Name="System.Xml" %> ||	references and assembly that can be accessed in the current template ||
 
 ==Diff/Merge/Patch==
 При использовании генерации возможны ситуации, когда придется ''соединять'' (merge) изменения, сделанные пользователем и сгенерированные автоматические.
