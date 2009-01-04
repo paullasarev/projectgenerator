@@ -1,4 +1,5 @@
 #summary template file generator requirements
+<wiki:toc />
 ==Требования==
 
 Генератор файлов по шаблону должен
