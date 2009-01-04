@@ -93,5 +93,5 @@ public class <%=className%>
 
 Есть целый ряд библиотек для этого:
 
- *[http://razor.occams.info/code/diff/ Diff/Merge/Patch Library for C#/.NET. By Joshua Tauberer]
+ *[http://razor.occams.info/code/diff/Diff/Merge/Patch Library for C#/.NET. By Joshua Tauberer]
  * как обычно Google поможет: http://www.google.ru/search?q=C%23+diff+merge&ie=utf-8&oe=utf-8
