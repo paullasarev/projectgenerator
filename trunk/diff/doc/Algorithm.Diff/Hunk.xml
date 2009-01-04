@@ -1,0 +1,113 @@
+<Type Name="Hunk" FullName="Algorithm.Diff.Hunk">
+  <TypeSignature Language="C#" Value="public abstract class Hunk" />
+  <AssemblyInfo>
+    <AssemblyName>Diff</AssemblyName>
+    <AssemblyVersion>0.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Members>
+    <Member MemberName="IsSame">
+      <MemberSignature Language="C#" Value="public abstract bool IsSame (int index);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">A 0-based index indicating which revision document to return a portion of.</param>
+        <summary>Gets whether any changes were made in one of the revised documents in this hunk.</summary>
+        <returns>Whether the revised document had any changes in this hunk.</returns>
+        <remarks>For diffs created by hunks, <paramref name="index" /> must be zero.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Original">
+      <MemberSignature Language="C#" Value="public abstract Algorithm.Diff.Range Original ();" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>Algorithm.Diff.Range</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gets the range in the original document represented by this hunk.</summary>
+        <returns>The range in the original document in correspondence with the ranges in the changed documents, returned by <see cref="M:Algorithm.Diff.Hunk.Changes(int)" />.</returns>
+        <remarks>None.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Changes">
+      <MemberSignature Language="C#" Value="public abstract Algorithm.Diff.Range Changes (int index);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>Algorithm.Diff.Range</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">A 0-based index indicating which revision document to return a portion of.</param>
+        <summary>Gets the range in a revision document represented by this hunk.</summary>
+        <returns>A Range representing the portion of the revision document represented by this hunk.</returns>
+        <remarks>For diffs created by hunks, <paramref name="index" /> must be zero.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxLines">
+      <MemberSignature Language="C#" Value="public int MaxLines ();" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gets the maximum of the number of elements contained in the ranges for the original document and the revision documents.</summary>
+        <returns>The maximum value of the return of <see cref="M:Algorithm.Diff.Range.Count()" /> returned for <see cref="M:Algorithm.Diff.Hunk.Original()" /> and <see cref="M:Algorithm.Diff.Hunk.Changes(int)" /> for each revised document.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChangedLists">
+      <MemberSignature Language="C#" Value="public abstract int ChangedLists { get; };" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the number of lists in this hunk representing changes to the original document.</summary>
+        <value>For hunks created by diffs, this property always returns 1.  For hunks created by merges, this property returns the number of revision documents.</value>
+        <remarks>None.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Same">
+      <MemberSignature Language="C#" Value="public abstract bool Same { get; };" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets whether this hunk represents a portion of the original document in which no changes were made.</summary>
+        <value>
+          <see langword="true" /> if all of the revision documents match the original document, <see langword="false" /> otherwise.</value>
+        <remarks>None.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Conflict">
+      <MemberSignature Language="C#" Value="public abstract bool Conflict { get; };" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets whether this hunk represents a merge conflict.</summary>
+        <value>
+          <see langword="true" /> if more than one revision list had changes over the original document, <see langword="false" /> otherwise.</value>
+        <remarks>As diff hunks only have one revision document, this property always returns <see langword="false" /> for hunks created by diffs.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+  <Docs>
+    <summary>A hunk is a range in the original list that is in correspondence with ranges in one or more other lists.</summary>
+    <remarks>Hunks represent same or change portions of a list.</remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,27 @@
+<%@ Assembly Name="System.Xml" %>
+<%@ Import NameSpace="System.Xml" %>
+<%@ Import NameSpace="System.Collections" %>
+<%@ Argument Name="nameSpace" Type="string" %>
+<%@ Argument Name="className" Type="string" %>
+<%@ Argument Name="Guid" Type="string" %>
+<%@ Argument Name="ProgId" Type="string" %>
+<%@ Argument Name="AddinName" Type="string" %>
+<%@ Argument Name="DllName" Type="string" %>
+using System;
+using System.Runtime.InteropServices;
+using System.Reflection;
+using CoreNet.Utils;
+using RoleModel;
+
+namespace <%=nameSpace%>
+{
+	[ComVisible(true), Guid("<%=Guid%>"), ProgId("<%=ProgId%>")]
+	public partial class <%=className%>: AddIn.AddIn
+	{
+		public  <%=className%>()
+		{
+			AddinName = "<%=AddinName%>";
+			DllName = "<%=DllName%>";
+		}
+	}
+}

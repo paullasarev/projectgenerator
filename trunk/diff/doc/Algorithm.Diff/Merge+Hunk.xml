@@ -1,0 +1,46 @@
+<Type Name="Merge+Hunk" FullName="Algorithm.Diff.Merge+Hunk">
+  <TypeSignature Language="C#" Value="public class Hunk : Algorithm.Diff.Hunk" />
+  <AssemblyInfo>
+    <AssemblyName>Diff</AssemblyName>
+    <AssemblyVersion>0.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Algorithm.Diff.Hunk</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Members>
+    <Member MemberName="ChangedIndex">
+      <MemberSignature Language="C#" Value="public int ChangedIndex ();" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>The index of the revised document with the changes in this hunk.</summary>
+        <returns>The index of the revised document with the changes in this hunk, if there are no conflicts.  If there are conflicts, an exception is thrown.</returns>
+        <remarks>None.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChangesHunks">
+      <MemberSignature Language="C#" Value="public Algorithm.Diff.Diff+Hunk[] ChangesHunks (int index);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>Algorithm.Diff.Diff+Hunk[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">A 0-based index indicating which revision document to return the hunks of.</param>
+        <summary>Gets an array of smaller hunks for just one of the revised documents.</summary>
+        <returns>An array of hunks comparing the original document with the indicated revised document.</returns>
+        <remarks>The hunks returned by this method are useful because subportions of the revised document within this hunk may be unchanged from the original document.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+  <Docs>
+    <summary>A segment of the orginal document in which no revised documents had changes, or one or more revised documents had changes.</summary>
+    <remarks>See <see cref="T:Algorithm.Diff.Diff+Hunk" />.</remarks>
+  </Docs>
+</Type>

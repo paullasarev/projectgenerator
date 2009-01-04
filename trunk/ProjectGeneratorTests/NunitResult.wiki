@@ -1,0 +1,25 @@
+#summary nunit testing results 
+<p>
+04.01.2009 
+<p>
+{{{ 
+***** ProjectGeneratorTests.GeneratorTests.ProjectFileTemplates
+***** ProjectGeneratorTests.GeneratorTests.ProjectWithArgs
+***** ProjectGeneratorTests.GeneratorTests.ProjectWithArgsCache
+***** ProjectGeneratorTests.GeneratorTests.ProjectWithArgsUseCache
+***** ProjectGeneratorTests.GeneratorTests.RecursiveCatalog
+***** ProjectGeneratorTests.GeneratorTests.RecursiveCatalogMain
+***** ProjectGeneratorTests.GeneratorTests.TemplateCatalog
+***** ProjectGeneratorTests.GeneratorTests.TemplateCatalogAndFile
+***** ProjectGeneratorTests.GeneratorTests.TemplateCS
+***** ProjectGeneratorTests.GeneratorTests.XmlUtf8
+
+Tests run: 10, Failures: 1, Not run: 0, Time: 4.859 seconds
+
+Test Case Failures:
+1) ProjectGeneratorTests.GeneratorTests.RecursiveCatalogMain : System.IO.FileNotFoundException : Could not load file or assembly 'Commons.GetOptions, Version=1.0.2007.1, Culture=neutral, PublicKeyToken=null' or one of its dependencies. Не удается найти указанный файл.
+at ProjectGenerator.ProjectGenerator.Main(String[] args)
+at ProjectGeneratorTests.GeneratorTests.RecursiveCatalogMain()
+
+
+}}} 

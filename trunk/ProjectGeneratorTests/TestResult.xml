@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="d:\DotNet\ProjectGenerator\ProjectGenerator\ProjectGeneratorTests\ProjectGenerator.nunit" total="10" failures="1" not-run="0" date="2009-01-04" time="15:39:26">
+  <environment nunit-version="2.4.6.0" clr-version="2.0.50727.42" os-version="Microsoft Windows NT 5.1.2600 Service Pack 2" platform="Win32NT" cwd="d:\DotNet\ProjectGenerator\ProjectGenerator\ProjectGeneratorTests" machine-name="LAZO" user="Павел" user-domain="LAZO" />
+  <culture-info current-culture="ru-RU" current-uiculture="ru-RU" />
+  <test-suite name="d:\DotNet\ProjectGenerator\ProjectGenerator\ProjectGeneratorTests\ProjectGenerator.nunit" success="False" time="4.859" asserts="0">
+    <results>
+      <test-suite name="d:\DotNet\ProjectGenerator\ProjectGenerator\ProjectGeneratorTests\bin\Debug\ProjectGeneratorTests.dll" success="False" time="4.813" asserts="0">
+        <results>
+          <test-suite name="ProjectGeneratorTests" success="False" time="4.797" asserts="0">
+            <results>
+              <test-suite name="GeneratorTests" success="False" time="4.766" asserts="0">
+                <results>
+                  <test-case name="ProjectGeneratorTests.GeneratorTests.ProjectFileTemplates" executed="True" success="True" time="1.234" asserts="2" />
+                  <test-case name="ProjectGeneratorTests.GeneratorTests.ProjectWithArgs" executed="True" success="True" time="0.516" asserts="3" />
+                  <test-case name="ProjectGeneratorTests.GeneratorTests.ProjectWithArgsCache" executed="True" success="True" time="0.563" asserts="5" />
+                  <test-case name="ProjectGeneratorTests.GeneratorTests.ProjectWithArgsUseCache" executed="True" success="True" time="1.078" asserts="3" />
+                  <test-case name="ProjectGeneratorTests.GeneratorTests.RecursiveCatalog" executed="True" success="True" time="0.266" asserts="3" />
+                  <test-case name="ProjectGeneratorTests.GeneratorTests.RecursiveCatalogMain" executed="True" success="False" time="0.109" asserts="0">
+                    <failure>
+                      <message><![CDATA[System.IO.FileNotFoundException : Could not load file or assembly 'Commons.GetOptions, Version=1.0.2007.1, Culture=neutral, PublicKeyToken=null' or one of its dependencies. Не удается найти указанный файл.]]></message>
+                      <stack-trace><![CDATA[at ProjectGenerator.ProjectGenerator.Main(String[] args)
+at ProjectGeneratorTests.GeneratorTests.RecursiveCatalogMain()
+]]></stack-trace>
+                    </failure>
+                  </test-case>
+                  <test-case name="ProjectGeneratorTests.GeneratorTests.TemplateCatalog" executed="True" success="True" time="0.047" asserts="1" />
+                  <test-case name="ProjectGeneratorTests.GeneratorTests.TemplateCatalogAndFile" executed="True" success="True" time="0.250" asserts="2" />
+                  <test-case name="ProjectGeneratorTests.GeneratorTests.TemplateCS" executed="True" success="True" time="0.297" asserts="1" />
+                  <test-case name="ProjectGeneratorTests.GeneratorTests.XmlUtf8" executed="True" success="True" time="0.266" asserts="2" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

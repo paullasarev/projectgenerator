@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1000]D:\DotNet\ProjectGenerator\ProjectGenerator\ProjectGeneratorTests\ProjectGenerator.nunit</TopNode>
+  <SelectedNode>[0-1006]ProjectGeneratorTests.GeneratorTests.RecursiveCatalogMain</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1000]D:\DotNet\ProjectGenerator\ProjectGenerator\ProjectGeneratorTests\ProjectGenerator.nunit" Expanded="true">
+      <Nodes>
+        <Node UniqueName="[0-1012]D:\DotNet\ProjectGenerator\ProjectGenerator\ProjectGeneratorTests\bin\Debug\ProjectGeneratorTests.dll" Expanded="true">
+          <Nodes>
+            <Node UniqueName="[0-1013]ProjectGeneratorTests" Expanded="true">
+              <Nodes>
+                <Node UniqueName="[0-1001]ProjectGeneratorTests.GeneratorTests" Expanded="true">
+                  <Nodes>
+                    <Node UniqueName="[0-1010]ProjectGeneratorTests.GeneratorTests.ProjectFileTemplates" />
+                    <Node UniqueName="[0-1007]ProjectGeneratorTests.GeneratorTests.ProjectWithArgs" />
+                    <Node UniqueName="[0-1008]ProjectGeneratorTests.GeneratorTests.ProjectWithArgsCache" />
+                    <Node UniqueName="[0-1009]ProjectGeneratorTests.GeneratorTests.ProjectWithArgsUseCache" />
+                    <Node UniqueName="[0-1005]ProjectGeneratorTests.GeneratorTests.RecursiveCatalog" />
+                    <Node UniqueName="[0-1006]ProjectGeneratorTests.GeneratorTests.RecursiveCatalogMain" />
+                    <Node UniqueName="[0-1003]ProjectGeneratorTests.GeneratorTests.TemplateCatalog" />
+                    <Node UniqueName="[0-1004]ProjectGeneratorTests.GeneratorTests.TemplateCatalogAndFile" />
+                    <Node UniqueName="[0-1002]ProjectGeneratorTests.GeneratorTests.TemplateCS" />
+                    <Node UniqueName="[0-1011]ProjectGeneratorTests.GeneratorTests.XmlUtf8" />
+                  </Nodes>
+                </Node>
+              </Nodes>
+            </Node>
+          </Nodes>
+        </Node>
+      </Nodes>
+    </Node>
+  </Nodes>
+</VisualState>

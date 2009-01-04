@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/website template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>TemplateMaschine - an open source template engine for C#</title>
+<!-- InstanceEndEditable -->
+<link media=all href="style.css" type=text/css rel=stylesheet>
+<link media=all href="csharp.css" type=text/css rel=stylesheet>
+<script type="text/javascript">
+	/*<![CDATA[*/
+<!--
+
+  // JS function for uncrypting spam-protected emails:
+function UnCryptMailto(s) {	//
+	var n=0;
+	var r="";
+	for(var i=0; i < s.length; i++) {
+		n=s.charCodeAt(i);
+		if (n>=8364) {n = 128;}
+		r += String.fromCharCode(n-(2));
+	}
+	return r;
+}
+  // JS function for uncrypting spam-protected emails:
+function linkTo_UnCryptMailto(s)	{	//
+	location.href=UnCryptMailto(s);
+}
+		
+		// JS function for mouse-over
+	function over(name,imgObj)	{	//
+		if (version == "n3" && document[name]) {document[name].src = eval(name+"_h.src");}
+		else if (imgObj)	{imgObj.src = eval(name+"_h.src");}
+	}
+		// JS function for mouse-out
+	function out(name,imgObj)	{	//
+		if (version == "n3" && document[name]) {document[name].src = eval(name+"_n.src");}
+		else if (imgObj)	{imgObj.src = eval(name+"_n.src");}
+	}
+
+// -->
+	/*]]>*/
+</script>
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<!-- InstanceParam name="ShowBackReference" type="boolean" value="true" -->
+<!-- InstanceParam name="href" type="text" value="templatemaschine.html" -->
+<!-- InstanceParam name="ShowFeedback" type="boolean" value="false" -->
+</head>
+<body>
+<div class="pagelayout">
+  <div id="header"><A href="http://www.stefansarstedt.com">Dr. Stefan Sarstedt</A><br>
+    <!-- InstanceBeginEditable name="PageNavigationPath" -->Projects/TemplateMaschine<!-- InstanceEndEditable --></div>
+  <table border="0" cellpadding="0" cellspacing="0">
+    <!--DWLayoutTable-->
+    <tr>
+      <td width="190" height="524" valign="top"><div id="menu">
+          <H1>Personal</H1>
+          <UL class=list>
+            <LI class=listitem><A class=listitem href="index.html">Home</A></LI>
+            <LI class=listitem><A class=listitem href="aboutme.html">About me</A></LI>
+            <LI class=listitem><A class=listitem href="publications.html">Publications</A></LI>
+            <LI class=listitem><A class=listitem href="aboutme.html#contact">Contact</A></LI>
+          </UL>
+          <H1>Projects</H1>
+          <UL class=list>
+            <LI class=listitem><A class=listitem href="http://activecharts.informatik.uni-ulm.de">ActiveCharts</A></LI>
+            <LI class=listitem><A class=listitem href="templatemaschine.html">TemplateMaschine</A></LI>
+          </UL>
+          <H1>Teaching</H1>
+          <UL class=list>
+<!--            <LI class=listitem><A class=listitem href="teaching_current.html">Current</A></LI>-->
+            <LI class=listitem><A class=listitem href="teaching.html">Past</A></LI>
+          </UL>
+        </div></td>
+      <td width="600" valign="top"><div class="block">
+          <h1 class="block_title"><!-- InstanceBeginEditable name="ContentTitleImage" --><img src="images/dievorlagenmaschine_title.jpg" width="325" height="29"><!-- InstanceEndEditable --><br>
+            <!-- InstanceBeginEditable name="ContentSubtitle" -->An open source template engine for C#<!-- InstanceEndEditable --></h1>
+          <p>&nbsp;</p>
+          <div class="content"> 
+		  <p>[Click <a href="templatemaschine.html">here</a> to return to the main page of this project]</p>
+		  <!-- InstanceBeginEditable name="ContentIntroduction" --><!-- InstanceEndEditable -->
+		  <!-- InstanceBeginRepeat name="Sections" --><!-- InstanceBeginRepeatEntry -->
+            <div class="contenttitle"><!-- InstanceBeginEditable name="SectionTitle" -->Example 3: Embedding Templates <!-- InstanceEndEditable --></div>
+            <!-- InstanceBeginEditable name="SectionContent" --> 
+			<p>You can also embed your templates in your assembly instead of leaving them in external
+			files. This is useful if you'd like to &quot;package&quot; templates with your generator code.</p>
+			<p>See the driver code which uses an embedded template:</p>
+			    <div class="codeblock">
+                  File <a href="dievorlagenmaschine.html#download">SampleDriver3.cs</a>:
+				  <pre class="csharpcode">
+<span class="kwrd">using</span> System;
+<span class="kwrd">using</span> TemplateMaschine;
+
+<span class="kwrd">namespace</span> Sample
+{
+    <span class="kwrd">class</span> SampleDriver3
+    {
+        <span class="kwrd">static</span> <span class="kwrd">void</span> Main(<span class="kwrd">string</span>[] args)
+        {
+            <span class="rem">// Load a template from the current executing </span>
+            <span class="rem">// assembly and compile it</span>
+            Template myTemplate = <span class="kwrd">new</span> Template(<span class="str">"Sample.template"</span>, 
+                                   <span class="kwrd">typeof</span>(SampleDriver3).Assembly);
+
+            <span class="rem">// Process the template with no arguments</span>
+            <span class="rem">// and write output to file 'SampleOutput.txt'</span>
+            myTemplate.Generate(<span class="kwrd">null</span>, <span class="str">"SampleOutput.txt"</span>);
+        }
+    }
+}</pre>
+                    <p>Go to the <a href="Page#download">[download section]</a> to download the complete source code.</p>
+            </div>
+
+			<p>The template processor looks for the template <span class="codeinline">Sample.template</span> in the
+			current executing assembly (stated by <span class="codeinline">typeof(SampleDriver3).Assembly</span>).</p>
+			<p>To embed a template in an assembly you have two possibilities: You can use the <span class="codeinline">/resource:</span> 
+			command line switch from <span class="codeinline">csc.exe</span>, if you're using a build script for example...</p>
+              <div class="codeblock">
+                    <pre class="cmdline">C:\&gt; csc /resource:Sample.template /r:TemplateMaschine.dll SampleDriver3.cs</pre>
+              </div>
+			  <p>...or, if you are using Visual Studio .NET, select the template file in solution explorer
+			  and set it's &quot;Build Action&quot; to &quot;Embedded Resource&quot; in the Properties Explorer:</p>
+			  <p><img src="images/vsnet_buildaction_embedded.jpg"></p>
+			<!-- InstanceEndEditable -->
+            <div class=separator>&nbsp;</div>
+		  <p>[Click <a href="templatemaschine.html">here</a> to return to the main page of this project]</p><div class=separator>&nbsp;</div>
+          <!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat --> 
+		  
+		  </div>
+          <div class="block_footer">
+            <div class="itemdesc">This page was last changed on 
+              <script language="javascript" type="text/javascript">document.write(document.lastModified);</script>
+            </div>
+          </div>
+        </div></td>
+    </tr>
+  </table>
+</DIV>
+</body>
+<!-- InstanceEnd --></html>
