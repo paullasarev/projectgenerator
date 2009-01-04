@@ -28,6 +28,32 @@ During processing the engine substitute this names (here *$(project)*) whith con
 
 In any template directory may exist special file named *".args.template"*. This file is NOT copy to target dir, but variables, defined  in this file, goes deep in recursion.
 
+This file have a simple format, for example
+{{{
+# this is comment
+project ProjectName
+description One line description
+
+AssemblyName TheProject
+}}}
+
+Empty lines are ignored.
+
+One-line comments starts from "#"
+
+Each line define variable name (first word) and it's content (rest of line)
+
+This file (.args.template) is also processed by TemplateMachine engine, so it is possible declare variable in any kind of C# operators, for example:
+
+{{{
+<%Argument Name="project" Type="string" %>
+
+project_Guid <% Guid.NewGuid()%>
+
+project_Common_Name <%=project%>.Common
+project_Common_Guid <% Guid.NewGuid()%>
+project_Common_Namespace <%=project%>.Common
+}}}
 
 
 =What is a cache file .args.cache?=
