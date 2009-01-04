@@ -16,7 +16,7 @@ Template directory may contain special files *".args.template"* (see below). Thi
 
 Target directory may contain special files *".args.cache"* (see below). This file contain cache of previously-generated variables and processes after all.
 
-=What is file template?=
+=What is a file template?=
 File template is an _any_ file whith some syntax constructions like this:
 
 {{{
