@@ -29,7 +29,7 @@ project_Common_Guid <% Guid.NewGuid()%>
 project_Common_Namespace <%=project%>.Common
 }}}
 
-File content is processed by [http://www.stefansarstedt.com/dievorlagenmaschine_doc.html TemplateMachine engine] and then will be written to target diretory.
+File content is processed by [TemplateMachine TemplateMachine engine] and then will be written to target diretory.
 
 =What is a file- and directory- name template?=
 Directory names in template tree can contain special symbols like *$(project).sln*. 
