@@ -40,6 +40,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Commons.GetOptions\Commons.GetOptions.csproj">
+      <Project>{D2C0C98B-3C0D-48DC-9E7F-324FAD36AD51}</Project>
+      <Name>Commons.GetOptions</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ProjectGenerator\ProjectGenerator.csproj">
       <Project>{5D26C546-49CF-4303-B12D-BCCEF5EE0BBD}</Project>
       <Name>ProjectGenerator</Name>
