@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Commons.GetOptions;
 
 //[assembly: AssemblyTitle("ProjectGenerator")]
-//[assembly: AssemblyCopyright("(c)2008 KINT")]
+//[assembly: AssemblyCopyright("(c)2008-2009 Paul Lasarev")]
 //[assembly: AssemblyDescription("Template project generator")]
 //[assembly: AssemblyVersion("2.0.0.0")]
 
@@ -11,7 +11,7 @@ using Commons.GetOptions;
 [assembly: Commons.Author("Paul Lasarev")]
 [assembly: Commons.UsageComplement("")]
 [assembly: Commons.AdditionalInfo("")]
-[assembly: Commons.ReportBugsTo("support@kint.ru")]
+[assembly: Commons.ReportBugsTo("http://code.google.com/p/projectgenerator/issues/entry")]
 
 
 namespace ProjectGenerator
