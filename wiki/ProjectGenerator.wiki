@@ -1,6 +1,6 @@
 #summary project home page.
 
-ProjectGenerator is a simple tool for template-based files an directory tree generation.
+ProjectGenerator is a simple tool for template-based file and directory tree generation.
 
 Other software of this category is a [http://www.ericjsmith.net/codesmith/ CodeSmith], but it is not an open project and is too complex for such simple thing.
 
