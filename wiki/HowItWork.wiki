@@ -38,7 +38,7 @@ During processing the engine substitute this names (here *$(project)*) whith con
 
 =What is a special file .args.template?=
 
-In any template directory may exist special file named *".args.template"*. This file is NOT copy to target dir, but variables, defined  in this file, goes deep in recursion.
+In any template directory may exist special file named *".args.template"*. This file is NOT copied to target dir, but variables, defined  in this file, goes deep in recursion.
 
 This file have a simple format, for example
 {{{
