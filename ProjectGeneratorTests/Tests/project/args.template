@@ -1,0 +1,7 @@
+<%Argument Name="project" Type="string" %>
+
+project_Guid <% Guid.NewGuid()%>
+
+project_Common_Name <%=project%>.Common
+project_Common_Guid <% Guid.NewGuid()%>
+project_Common_Namespace <%=project%>.Common

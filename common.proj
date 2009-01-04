@@ -1,0 +1,21 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+   <Target Name="AfterBuild">
+
+    <CreateItem Include="$(OutputPath)\**\*.dll">
+      <Output ItemName="OutputAssemblies" TaskParameter="Include"/>
+    </CreateItem>
+    <CreateItem Include="$(OutputPath)\**\*"  Exclude="$(OutputPath)\**\*.dll">
+      <Output ItemName="OutputFiles" TaskParameter="Include"/>
+    </CreateItem>
+
+
+    <Message Text="%0a%0dOutputAssemblies:%0a%0d    @(OutputAssemblies,'%0a%0d    ')" />
+    <Message Text="%0a%0dOutputFiles:%0a%0d    @(OutputFiles,'%0a%0d    ')" /> 
+
+    <WriteLinesToFile
+            File="targets"
+            Lines="@(OutputAssemblies->'%(Filename)%(extension)')"
+            Overwrite="true"/>
+    </Target>
+
+</Project>

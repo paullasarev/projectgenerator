@@ -1,0 +1,7 @@
+<%@ Argument Name="project" Type="string" %>
+
+project_Guid 218A6F24-4731-4b5f-A85C-F5A63FB22BF5
+
+project_Common_Name <%=project%>.Common
+project_Common_Guid 47CC1505-8F80-471d-BC5A-C1572AA6144C
+project_Common_Namespace <%=project%>.Common

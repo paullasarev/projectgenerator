@@ -1,0 +1,301 @@
+<html>
+  <head>
+    <title>Algorithm.Diff.Hunk</title>
+    <style>
+					a { text-decoration: none }
+				
+					.CollectionTitle { font-weight: bold }
+					.PageTitle { font-size: 150%; font-weight: bold }
+
+					.Summary { }
+					.Signature { }					
+					.Remarks { }
+					.Members { }
+					.Copyright { }
+					
+					.Section { font-size: 125%; font-weight: bold }
+					.SectionBox { margin-left: 2em }
+					.NamespaceName { display: block; font-size: 105%; font-weight: bold; color: #000066; border-bottom: 1px solid black }
+					.NamespaceName:hover { font-style: italic }
+					.NamespaceSumary { }
+					.MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+					.MemberSignature { font-family: monospace; margin-top: 1em; }
+					.MemberBox { }
+					.Subsection { font-size: 105%; font-weight: bold }
+					.SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+					
+					.SignatureTable { background-color: #c0c0c0; }
+					.EnumerationsTable th { background-color: #f2f2f2; }
+					.CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+					
+					.MembersListing td { margin: 0px; border: 1px solid black; padding: .25em }
+					
+					.TypesListing td { margin: 0px;  padding: .25em }
+					
+					.titlebar {
+						color: #efefef;
+						font-size: 14pt;
+						font-family: Trebuchet MS;
+						border: 0;
+						margin: 0;
+						padding: 1em;
+						background: #666666;
+					}
+					.titlebar a {
+						color: #efefef;
+					}
+				</style>
+  </head>
+  <body style="margin: 0px;">
+    <div class="titlebar">
+      <div class="CollectionTitle">
+        <a href="../index.html">Diff</a>
+			:
+			<a href="index.html">Algorithm.Diff Namespace</a></div>
+      <div class="PageTitle">Hunk</div>
+    </div>
+    <div style="padding: 1em">
+      <p class="Summary">A hunk is a range in the original list that is in correspondence with ranges in one or more other lists.</p>
+      <div class="Signature">
+        <table class="SignatureTable" cellspacing="0" width="100%">
+          <tr>
+            <td>
+              <table class="InnerSignatureTable" cellpadding="10" cellspacing="0" width="100%">
+                <tr bgcolor="#f2f2f2">
+                  <td>public abstract class  <b>Hunk</b></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        <br>
+        </br>
+      </div>
+      <div class="Remarks">
+        <div class="Subsection">Remarks</div>
+        <div class="SubsectionBox">Hunks represent same or change portions of a list.</div>
+        <div class="Section">Members</div>
+        <div class="SectionBox">
+          <p>
+						See Also: Inherited members from
+						<a href="&#xA;						http://mono.ximian.com:8080/monodoc.ashx?link=T:System.Object">object</a>.
+					</p>
+          <div class="Subsection" style="margin-bottom: .75em">Properties</div>
+          <div class="SubsectionBox">
+            <table Class="MembersListing">
+              <tr valign="top">
+                <td>
+                  <b>
+                    <a href="#member_Monofilemx003Ammx002Fmmx002Fmmx002Fmhomemx002Fmtauberermx002Fmdevmx002Fmdiffmx002Fmdocmx002FmAlgorithm.Diffmx002FmHunk.xmlElementm4m4m0m0m">ChangedLists</a>
+                  </b>
+					[read-only]
+					<div>abstract </div></td>
+                <td>
+                  <i>
+                    <a href="&#xA;						http://mono.ximian.com:8080/monodoc.ashx?link=T:System.Int32">int</a>
+                  </i>. Gets the number of lists in this hunk representing changes to the original document.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <b>
+                    <a href="#member_Monofilemx003Ammx002Fmmx002Fmmx002Fmhomemx002Fmtauberermx002Fmdevmx002Fmdiffmx002Fmdocmx002FmAlgorithm.Diffmx002FmHunk.xmlElementm6m4m0m0m">Conflict</a>
+                  </b>
+					[read-only]
+					<div>abstract </div></td>
+                <td>
+                  <i>
+                    <a href="&#xA;						http://mono.ximian.com:8080/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. Gets whether this hunk represents a merge conflict.</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <b>
+                    <a href="#member_Monofilemx003Ammx002Fmmx002Fmmx002Fmhomemx002Fmtauberermx002Fmdevmx002Fmdiffmx002Fmdocmx002FmAlgorithm.Diffmx002FmHunk.xmlElementm5m4m0m0m">Same</a>
+                  </b>
+					[read-only]
+					<div>abstract </div></td>
+                <td>
+                  <i>
+                    <a href="&#xA;						http://mono.ximian.com:8080/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. Gets whether this hunk represents a portion of the original document in which no changes were made.</td>
+              </tr>
+            </table>
+          </div>
+          <div class="Subsection" style="margin-bottom: .75em">Methods</div>
+          <div class="SubsectionBox">
+            <table Class="MembersListing">
+              <tr valign="top">
+                <td>abstract </td>
+                <td>
+                  <b>
+                    <a href="#member_Monofilemx003Ammx002Fmmx002Fmmx002Fmhomemx002Fmtauberermx002Fmdevmx002Fmdiffmx002Fmdocmx002FmAlgorithm.Diffmx002FmHunk.xmlElementm2m4m0m0m">Changes</a>
+                  </b>(<a href="&#xA;						http://mono.ximian.com:8080/monodoc.ashx?link=T:System.Int32">int</a>)<nobr>
+						:
+						<a href="../Algorithm.Diff/Range.html">Range</a></nobr><div>Gets the range in a revision document represented by this hunk.</div></td>
+              </tr>
+              <tr valign="top">
+                <td>abstract </td>
+                <td>
+                  <b>
+                    <a href="#member_Monofilemx003Ammx002Fmmx002Fmmx002Fmhomemx002Fmtauberermx002Fmdevmx002Fmdiffmx002Fmdocmx002FmAlgorithm.Diffmx002FmHunk.xmlElementm0m4m0m0m">IsSame</a>
+                  </b>(<a href="&#xA;						http://mono.ximian.com:8080/monodoc.ashx?link=T:System.Int32">int</a>)<nobr>
+						:
+						<a href="&#xA;						http://mono.ximian.com:8080/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><div>Gets whether any changes were made in one of the revised documents in this hunk.</div></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                </td>
+                <td>
+                  <b>
+                    <a href="#member_Monofilemx003Ammx002Fmmx002Fmmx002Fmhomemx002Fmtauberermx002Fmdevmx002Fmdiffmx002Fmdocmx002FmAlgorithm.Diffmx002FmHunk.xmlElementm3m4m0m0m">MaxLines</a>
+                  </b>()<nobr>
+						:
+						<a href="&#xA;						http://mono.ximian.com:8080/monodoc.ashx?link=T:System.Int32">int</a></nobr><div>Gets the maximum of the number of elements contained in the ranges for the original document and the revision documents.</div></td>
+              </tr>
+              <tr valign="top">
+                <td>abstract </td>
+                <td>
+                  <b>
+                    <a href="#member_Monofilemx003Ammx002Fmmx002Fmmx002Fmhomemx002Fmtauberermx002Fmdevmx002Fmdiffmx002Fmdocmx002FmAlgorithm.Diffmx002FmHunk.xmlElementm1m4m0m0m">Original</a>
+                  </b>()<nobr>
+						:
+						<a href="../Algorithm.Diff/Range.html">Range</a></nobr><div>Gets the range in the original document represented by this hunk.</div></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="Members">
+        <div class="Section">Member Details</div>
+        <div class="SectionBox">
+          <a name="member_Monofilemx003Ammx002Fmmx002Fmmx002Fmhomemx002Fmtauberermx002Fmdevmx002Fmdiffmx002Fmdocmx002FmAlgorithm.Diffmx002FmHunk.xmlElementm0m4m0m0m">
+          </a>
+          <div class="MemberName">IsSame</div>
+          <div class="MemberSignature">public abstract <a href="&#xA;						http://mono.ximian.com:8080/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsSame</b> (<a href="&#xA;						http://mono.ximian.com:8080/monodoc.ashx?link=T:System.Int32">int</a> index)</div>
+          <div class="MemberBox">
+            <p>Gets whether any changes were made in one of the revised documents in this hunk.</p>
+            <div class="Subsection">Parameters</div>
+            <div class="SubsectionBox">
+              <dl>
+                <dt>
+                  <i>index</i>
+                </dt>
+                <dd>A 0-based index indicating which revision document to return a portion of.</dd>
+              </dl>
+            </div>
+            <div class="Subsection">Returns</div>
+            <div class="SubsectionBox">Whether the revised document had any changes in this hunk.</div>
+            <div class="Subsection">Remarks</div>
+            <div class="SubsectionBox">For diffs created by hunks, <i>index</i> must be zero.</div>
+            <hr size="1">
+            </hr>
+          </div>
+          <a name="member_Monofilemx003Ammx002Fmmx002Fmmx002Fmhomemx002Fmtauberermx002Fmdevmx002Fmdiffmx002Fmdocmx002FmAlgorithm.Diffmx002FmHunk.xmlElementm1m4m0m0m">
+          </a>
+          <div class="MemberName">Original</div>
+          <div class="MemberSignature">public abstract <a href="../Algorithm.Diff/Range.html">Range</a> <b>Original</b> ()</div>
+          <div class="MemberBox">
+            <p>Gets the range in the original document represented by this hunk.</p>
+            <div class="Subsection">Returns</div>
+            <div class="SubsectionBox">The range in the original document in correspondence with the ranges in the changed documents, returned by Algorithm.Diff.Hunk.Changes(int).</div>
+            <div class="Subsection">Remarks</div>
+            <div class="SubsectionBox">None.</div>
+            <hr size="1">
+            </hr>
+          </div>
+          <a name="member_Monofilemx003Ammx002Fmmx002Fmmx002Fmhomemx002Fmtauberermx002Fmdevmx002Fmdiffmx002Fmdocmx002FmAlgorithm.Diffmx002FmHunk.xmlElementm2m4m0m0m">
+          </a>
+          <div class="MemberName">Changes</div>
+          <div class="MemberSignature">public abstract <a href="../Algorithm.Diff/Range.html">Range</a> <b>Changes</b> (<a href="&#xA;						http://mono.ximian.com:8080/monodoc.ashx?link=T:System.Int32">int</a> index)</div>
+          <div class="MemberBox">
+            <p>Gets the range in a revision document represented by this hunk.</p>
+            <div class="Subsection">Parameters</div>
+            <div class="SubsectionBox">
+              <dl>
+                <dt>
+                  <i>index</i>
+                </dt>
+                <dd>A 0-based index indicating which revision document to return a portion of.</dd>
+              </dl>
+            </div>
+            <div class="Subsection">Returns</div>
+            <div class="SubsectionBox">A Range representing the portion of the revision document represented by this hunk.</div>
+            <div class="Subsection">Remarks</div>
+            <div class="SubsectionBox">For diffs created by hunks, <i>index</i> must be zero.</div>
+            <hr size="1">
+            </hr>
+          </div>
+          <a name="member_Monofilemx003Ammx002Fmmx002Fmmx002Fmhomemx002Fmtauberermx002Fmdevmx002Fmdiffmx002Fmdocmx002FmAlgorithm.Diffmx002FmHunk.xmlElementm3m4m0m0m">
+          </a>
+          <div class="MemberName">MaxLines</div>
+          <div class="MemberSignature">public <a href="&#xA;						http://mono.ximian.com:8080/monodoc.ashx?link=T:System.Int32">int</a> <b>MaxLines</b> ()</div>
+          <div class="MemberBox">
+            <p>Gets the maximum of the number of elements contained in the ranges for the original document and the revision documents.</p>
+            <div class="Subsection">Returns</div>
+            <div class="SubsectionBox">The maximum value of the return of Algorithm.Diff.Range.Count() returned for Algorithm.Diff.Hunk.Original() and Algorithm.Diff.Hunk.Changes(int) for each revised document.</div>
+            <div class="Subsection">Remarks</div>
+            <div class="SubsectionBox">To be added.</div>
+            <hr size="1">
+            </hr>
+          </div>
+          <a name="member_Monofilemx003Ammx002Fmmx002Fmmx002Fmhomemx002Fmtauberermx002Fmdevmx002Fmdiffmx002Fmdocmx002FmAlgorithm.Diffmx002FmHunk.xmlElementm4m4m0m0m">
+          </a>
+          <div class="MemberName">ChangedLists</div>
+          <div class="MemberSignature">public abstract <a href="&#xA;						http://mono.ximian.com:8080/monodoc.ashx?link=T:System.Int32">int</a> <b>ChangedLists</b>  
+						{
+						 get; 
+						}
+					</div>
+          <div class="MemberBox">
+            <p>Gets the number of lists in this hunk representing changes to the original document.</p>
+            <div class="Subsection">Value</div>
+            <div class="SubsectionBox">For hunks created by diffs, this property always returns 1.  For hunks created by merges, this property returns the number of revision documents.</div>
+            <div class="Subsection">Remarks</div>
+            <div class="SubsectionBox">None.</div>
+            <hr size="1">
+            </hr>
+          </div>
+          <a name="member_Monofilemx003Ammx002Fmmx002Fmmx002Fmhomemx002Fmtauberermx002Fmdevmx002Fmdiffmx002Fmdocmx002FmAlgorithm.Diffmx002FmHunk.xmlElementm5m4m0m0m">
+          </a>
+          <div class="MemberName">Same</div>
+          <div class="MemberSignature">public abstract <a href="&#xA;						http://mono.ximian.com:8080/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Same</b>  
+						{
+						 get; 
+						}
+					</div>
+          <div class="MemberBox">
+            <p>Gets whether this hunk represents a portion of the original document in which no changes were made.</p>
+            <div class="Subsection">Value</div>
+            <div class="SubsectionBox">
+              <tt>true</tt> if all of the revision documents match the original document, <tt>false</tt> otherwise.</div>
+            <div class="Subsection">Remarks</div>
+            <div class="SubsectionBox">None.</div>
+            <hr size="1">
+            </hr>
+          </div>
+          <a name="member_Monofilemx003Ammx002Fmmx002Fmmx002Fmhomemx002Fmtauberermx002Fmdevmx002Fmdiffmx002Fmdocmx002FmAlgorithm.Diffmx002FmHunk.xmlElementm6m4m0m0m">
+          </a>
+          <div class="MemberName">Conflict</div>
+          <div class="MemberSignature">public abstract <a href="&#xA;						http://mono.ximian.com:8080/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Conflict</b>  
+						{
+						 get; 
+						}
+					</div>
+          <div class="MemberBox">
+            <p>Gets whether this hunk represents a merge conflict.</p>
+            <div class="Subsection">Value</div>
+            <div class="SubsectionBox">
+              <tt>true</tt> if more than one revision list had changes over the original document, <tt>false</tt> otherwise.</div>
+            <div class="Subsection">Remarks</div>
+            <div class="SubsectionBox">As diff hunks only have one revision document, this property always returns <tt>false</tt> for hunks created by diffs.</div>
+            <hr size="1">
+            </hr>
+          </div>
+        </div>
+      </div>
+      <hr size="1" />
+      <div class="Copyright">
+      </div>
+    </div>
+  </body>
+</html>

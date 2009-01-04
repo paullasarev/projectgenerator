@@ -1,0 +1,6 @@
+nameSpace AddIn.VarsiYatchi
+className AddIn
+Guid 9B740D4B-2C8F-48a4-BEA8-DA39796C8D93
+ProgId AddIn.VarsiYatchi
+AddinName VarsiYatchi
+DllName knetVY

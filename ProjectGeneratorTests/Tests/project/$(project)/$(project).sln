@@ -1,0 +1,24 @@
+<%Argument Name="project_Common_Guid" Type="String"%>
+<%Argument Name="project_Guid" Type="String"%>
+
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{<%=project_Guid%>}") = "<%=project_Common_Name%>", "<%=project_Common_Name%>\<%=project_Common_Name%>.csproj", "{<%=project_Common_Guid%>}"
+EndProject
+
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{<%=project_Common_Guid%>}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{<%=project_Common_Guid%>}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{<%=project_Common_Guid%>}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{<%=project_Common_Guid%>}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
+

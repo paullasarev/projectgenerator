@@ -1,0 +1,155 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/website template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>TemplateMaschine - an open source template engine for C#</title>
+<!-- InstanceEndEditable -->
+<link media=all href="style.css" type=text/css rel=stylesheet>
+<link media=all href="csharp.css" type=text/css rel=stylesheet>
+<script type="text/javascript">
+	/*<![CDATA[*/
+<!--
+
+  // JS function for uncrypting spam-protected emails:
+function UnCryptMailto(s) {	//
+	var n=0;
+	var r="";
+	for(var i=0; i < s.length; i++) {
+		n=s.charCodeAt(i);
+		if (n>=8364) {n = 128;}
+		r += String.fromCharCode(n-(2));
+	}
+	return r;
+}
+  // JS function for uncrypting spam-protected emails:
+function linkTo_UnCryptMailto(s)	{	//
+	location.href=UnCryptMailto(s);
+}
+		
+		// JS function for mouse-over
+	function over(name,imgObj)	{	//
+		if (version == "n3" && document[name]) {document[name].src = eval(name+"_h.src");}
+		else if (imgObj)	{imgObj.src = eval(name+"_h.src");}
+	}
+		// JS function for mouse-out
+	function out(name,imgObj)	{	//
+		if (version == "n3" && document[name]) {document[name].src = eval(name+"_n.src");}
+		else if (imgObj)	{imgObj.src = eval(name+"_n.src");}
+	}
+
+// -->
+	/*]]>*/
+</script>
+<!-- InstanceBeginEditable name="head" -->
+<style type="text/css">
+<!--
+.red {color: #FF0000}
+-->
+</style>
+<!-- InstanceEndEditable -->
+<!-- InstanceParam name="ShowBackReference" type="boolean" value="true" -->
+<!-- InstanceParam name="href" type="text" value="templatemaschine.html" -->
+<!-- InstanceParam name="ShowFeedback" type="boolean" value="false" -->
+</head>
+<body>
+<div class="pagelayout">
+  <div id="header"><A href="http://www.stefansarstedt.com">Dr. Stefan Sarstedt</A><br>
+    <!-- InstanceBeginEditable name="PageNavigationPath" -->Projects/TemplateMaschine<!-- InstanceEndEditable --></div>
+  <table border="0" cellpadding="0" cellspacing="0">
+    <!--DWLayoutTable-->
+    <tr>
+      <td width="190" height="524" valign="top"><div id="menu">
+          <H1>Personal</H1>
+          <UL class=list>
+            <LI class=listitem><A class=listitem href="index.html">Home</A></LI>
+            <LI class=listitem><A class=listitem href="aboutme.html">About me</A></LI>
+            <LI class=listitem><A class=listitem href="publications.html">Publications</A></LI>
+            <LI class=listitem><A class=listitem href="aboutme.html#contact">Contact</A></LI>
+          </UL>
+          <H1>Projects</H1>
+          <UL class=list>
+            <LI class=listitem><A class=listitem href="http://activecharts.informatik.uni-ulm.de">ActiveCharts</A></LI>
+            <LI class=listitem><A class=listitem href="templatemaschine.html">TemplateMaschine</A></LI>
+          </UL>
+          <H1>Teaching</H1>
+          <UL class=list>
+<!--            <LI class=listitem><A class=listitem href="teaching_current.html">Current</A></LI>-->
+            <LI class=listitem><A class=listitem href="teaching.html">Past</A></LI>
+          </UL>
+        </div></td>
+      <td width="600" valign="top"><div class="block">
+          <h1 class="block_title"><!-- InstanceBeginEditable name="ContentTitleImage" --><img src="images/dievorlagenmaschine_title.jpg" width="325" height="29"><!-- InstanceEndEditable --><br>
+            <!-- InstanceBeginEditable name="ContentSubtitle" -->An open source template engine for C#<!-- InstanceEndEditable --></h1>
+          <p>&nbsp;</p>
+          <div class="content"> 
+		  <p>[Click <a href="templatemaschine.html">here</a> to return to the main page of this project]</p>
+		  <!-- InstanceBeginEditable name="ContentIntroduction" --><!-- InstanceEndEditable -->
+		  <!-- InstanceBeginRepeat name="Sections" --><!-- InstanceBeginRepeatEntry -->
+            <div class="contenttitle"><!-- InstanceBeginEditable name="SectionTitle" -->Description of template elements<!-- InstanceEndEditable --></div>
+            <!-- InstanceBeginEditable name="SectionContent" -->
+			<p>For a description of the <span class="codeinline">Template</span> class and its methods, refer to the <a href="Releases/DieVorlagenMaschine/Doc/index.html" target="_blank">Html documentation</a>. </p>
+			<table width="550" border="0" cellpadding="3" cellspacing="2">
+              <tr>
+                <td width="296"><div align="center"><strong>Template Tag</strong></div></td>
+                <td width="226"><div align="center"><strong>Description</strong></div></td>
+              </tr>
+              <tr>
+                <td style="background-color:#EEEEEE;"><span class="codeinline">&lt;%@ Assembly Name=&quot;System.Xml&quot; %&gt;</span><br></td>
+                <td>references and assembly that can be accessed in the current template </td>
+              </tr>
+              <tr>
+                <td style="background-color:#EEEEEE;"><span class="codeinline">&lt;%@ Import NameSpace=&quot;System.Threading&quot; %&gt;</span></td>
+                <td>imports a namespace for use in the current template </td>
+              </tr>
+              <tr>
+                <td style="background-color:#EEEEEE;"><span class="codeinline">&lt;%@ Argument Name=&quot;name&quot; Type=&quot;string&quot; %&gt;</span></td>
+                <td>declares a template parameter called <span class="codeinline">name</span> of type <span class="codeinline">string</span>; parameters must be passed to the <span class="codeinline">generate(...)</span> method and provided there in order of definition in the template.</td>
+              </tr>
+              <tr>
+                <td style="background-color:#EEEEEE;"><span class="codeinline">&lt;%@ Include File=&quot;another.template&quot; %&gt;</span><br></td>
+                <td>includes a template in the current template; you can therefore better organize your template files </td>
+              </tr>
+              <tr>
+                <td style="background-color:#EEEEEE;"><span class="codeinline"><p>&lt;script runat=&quot;template&quot;&gt;<br>
+                  int global_counter = 0; </p>
+                    <p>private string F()<br>
+                      {<br>
+ &nbsp;&nbsp;return global_counter.ToString();<br>
+ }<br>
+ &lt;/script&gt;<br>
+                  </p>
+                  </span></td>
+                <td>defines helper variables and functions that can be called in your template </td>
+              </tr>
+              <tr>
+                <td style="background-color:#EEEEEE;"><span class="codeinline">&lt;% for(int i=0; i<100; i++) { %&gt; </span></td>
+                <td>introduces a code block in the template which will be executed (<span class="red">don't forget to close braces</span>, e.g. by somewhere later writing <span class="codeinline">&quot;&lt;% } %&gt;&quot;</span>) </td>
+              </tr>
+              <tr>
+                <td style="background-color:#EEEEEE;"><span class="codeinline">&lt;%=name%&gt;</span></td>
+                <td>evaluates expression <span class="codeinline">&quot;name&quot;</span> and writes its result to the output </td>
+              </tr>
+              <tr>
+                <td style="background-color:#EEEEEE;"><span class="codeinline">&lt;% Response.Write(&quot;Hello!&quot;); %&gt; </span></td>
+                <td>directly writes to the output stream, this is sometimes useful</td>
+              </tr>
+            </table>
+            <!-- InstanceEndEditable -->
+            <div class=separator>&nbsp;</div>
+		  <p>[Click <a href="templatemaschine.html">here</a> to return to the main page of this project]</p><div class=separator>&nbsp;</div>
+          <!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat --> 
+		  
+		  </div>
+          <div class="block_footer">
+            <div class="itemdesc">This page was last changed on 
+              <script language="javascript" type="text/javascript">document.write(document.lastModified);</script>
+            </div>
+          </div>
+        </div></td>
+    </tr>
+  </table>
+</DIV>
+</body>
+<!-- InstanceEnd --></html>

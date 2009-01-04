@@ -1,0 +1,18 @@
+using System;
+using System.Runtime.InteropServices;
+using System.Reflection;
+using CoreNet.Utils;
+using RoleModel;
+
+namespace AddIn.VarsiYatchi
+{
+	[ComVisible(true), Guid("9B740D4B-2C8F-48a4-BEA8-DA39796C8D93"), ProgId("AddIn.VarsiYatchi")]
+	public partial class AddIn: AddIn.AddIn
+	{
+		public  AddIn()
+		{
+			AddinName = "VarsiYatchi";
+			DllName = "knetVY";
+		}
+	}
+}

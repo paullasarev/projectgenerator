@@ -1,0 +1,190 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/website template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>TemplateMaschine - an open source template engine for C#</title>
+<!-- InstanceEndEditable -->
+<link media=all href="style.css" type=text/css rel=stylesheet>
+<link media=all href="csharp.css" type=text/css rel=stylesheet>
+<script type="text/javascript">
+	/*<![CDATA[*/
+<!--
+
+  // JS function for uncrypting spam-protected emails:
+function UnCryptMailto(s) {	//
+	var n=0;
+	var r="";
+	for(var i=0; i < s.length; i++) {
+		n=s.charCodeAt(i);
+		if (n>=8364) {n = 128;}
+		r += String.fromCharCode(n-(2));
+	}
+	return r;
+}
+  // JS function for uncrypting spam-protected emails:
+function linkTo_UnCryptMailto(s)	{	//
+	location.href=UnCryptMailto(s);
+}
+		
+		// JS function for mouse-over
+	function over(name,imgObj)	{	//
+		if (version == "n3" && document[name]) {document[name].src = eval(name+"_h.src");}
+		else if (imgObj)	{imgObj.src = eval(name+"_h.src");}
+	}
+		// JS function for mouse-out
+	function out(name,imgObj)	{	//
+		if (version == "n3" && document[name]) {document[name].src = eval(name+"_n.src");}
+		else if (imgObj)	{imgObj.src = eval(name+"_n.src");}
+	}
+
+// -->
+	/*]]>*/
+</script>
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<!-- InstanceParam name="ShowBackReference" type="boolean" value="true" -->
+<!-- InstanceParam name="href" type="text" value="templatemaschine.html" -->
+<!-- InstanceParam name="ShowFeedback" type="boolean" value="false" -->
+</head>
+<body>
+<div class="pagelayout">
+  <div id="header"><A href="http://www.stefansarstedt.com">Dr. Stefan Sarstedt</A><br>
+    <!-- InstanceBeginEditable name="PageNavigationPath" -->Projects/TemplateMaschine<!-- InstanceEndEditable --></div>
+  <table border="0" cellpadding="0" cellspacing="0">
+    <!--DWLayoutTable-->
+    <tr>
+      <td width="190" height="524" valign="top"><div id="menu">
+          <H1>Personal</H1>
+          <UL class=list>
+            <LI class=listitem><A class=listitem href="index.html">Home</A></LI>
+            <LI class=listitem><A class=listitem href="aboutme.html">About me</A></LI>
+            <LI class=listitem><A class=listitem href="publications.html">Publications</A></LI>
+            <LI class=listitem><A class=listitem href="aboutme.html#contact">Contact</A></LI>
+          </UL>
+          <H1>Projects</H1>
+          <UL class=list>
+            <LI class=listitem><A class=listitem href="http://activecharts.informatik.uni-ulm.de">ActiveCharts</A></LI>
+            <LI class=listitem><A class=listitem href="templatemaschine.html">TemplateMaschine</A></LI>
+          </UL>
+          <H1>Teaching</H1>
+          <UL class=list>
+<!--            <LI class=listitem><A class=listitem href="teaching_current.html">Current</A></LI>-->
+            <LI class=listitem><A class=listitem href="teaching.html">Past</A></LI>
+          </UL>
+        </div></td>
+      <td width="600" valign="top"><div class="block">
+          <h1 class="block_title"><!-- InstanceBeginEditable name="ContentTitleImage" --><img src="images/dievorlagenmaschine_title.jpg" width="325" height="29"><!-- InstanceEndEditable --><br>
+            <!-- InstanceBeginEditable name="ContentSubtitle" -->An open source template engine for C#<!-- InstanceEndEditable --></h1>
+          <p>&nbsp;</p>
+          <div class="content"> 
+		  <p>[Click <a href="templatemaschine.html">here</a> to return to the main page of this project]</p>
+		  <!-- InstanceBeginEditable name="ContentIntroduction" --><!-- InstanceEndEditable -->
+		  <!-- InstanceBeginRepeat name="Sections" --><!-- InstanceBeginRepeatEntry -->
+            <div class="contenttitle"><!-- InstanceBeginEditable name="SectionTitle" -->Example 2: Templates with Arguments <!-- InstanceEndEditable --></div>
+            <!-- InstanceBeginEditable name="SectionContent" --> 
+			<p>Now let's write a more complicated template with arguments and usage of the <span class="codeinline">System.Xml.dll</span> assembly. Suppose you'd like to generate class
+			declarations in C# from a XML configuration file.</p>
+		    <div class="codeblock">
+                  File <a href="dievorlagenmaschine.html#download">Config.xml</a>:
+                    <pre class="csharpcode">&lt;?xml <span class="attr">version</span>=<span class="str">&quot;1.0&quot;</span> <span class="attr">encoding</span>=<span class="str">&quot;utf-8&quot;</span> ?&gt; <br>&lt;classes&gt;<br>    &lt;class <span class="attr">name</span>=&quot;<span class="str">Customer</span>&quot;&gt;<br>        &lt;attribute <span class="attr">name</span>=<span class="str">&quot;name&quot;</span>/&gt;<br>        &lt;attribute <span class="attr">name</span>=<span class="str">&quot;age&quot;</span>/&gt;<br>    &lt;/class&gt;<br>    &lt;class <span class="attr">name</span>=<span class="str">&quot;Department&quot;</span>&gt;<br>        &lt;attribute <span class="attr">name</span>=<span class="str">&quot;location&quot;</span>/&gt;<br>    &lt;/class&gt;<br>&lt;/classes&gt;</pre>
+                <p>Go to the <a href="dievorlagenmaschine.html#download">[download section]</a> to download the complete source code.
+                </p>
+            </div>
+
+			<p>Have a look at the template. It uses the <span class="codeinline">System.Xml</span> and <span class="codeinline">System.Collection</span> namespaces and gets two arguments. The first argument is the name of the current class to generate code for, the second one is an arraylist consisting of attribute names:</p>
+			   <div class="codeblock">
+                  File <a href="dievorlagenmaschine.html#download">Sample2.template</a>:
+                   <pre class="csharpcode">
+&lt;%@ Assembly Name=<span class="str">"System.Xml"</span> %&gt;
+&lt;%@ Import NameSpace=<span class="str">"System.Xml"</span> %&gt;
+&lt;%@ Import NameSpace=<span class="str">"System.Collections"</span> %&gt;
+&lt;%@ Argument Name=<span class="str">"className"</span> Type=<span class="str">"string"</span> %&gt;
+&lt;%@ Argument Name=<span class="str">"attributes"</span> Type=<span class="str">"ArrayList"</span> %&gt;
+<span class="kwrd">class</span> &lt;%=className%&gt;
+{
+    &lt;% <span class="kwrd">foreach</span>(<span class="kwrd">string</span> attr <span class="kwrd">in</span> attributes) { %&gt;
+    <span class="kwrd">public</span> <span class="kwrd">string</span> &lt;%=attr%&gt;;
+    &lt;% } %&gt;
+}</pre>
+                    Go to the <a href="dievorlagenmaschine.html#download">[download section]</a> to download the complete source code.
+            </div>
+			<p>Now, see the driver code. It reads the XML file and calls the template for each class, providing a class and attributes as arguments:</p>
+                <div class="codeblock">
+                  File <a href="dievorlagenmaschine.html#download">SampleDriver2.cs</a>:
+<pre class="csharpcode">
+<span class="kwrd">using</span> System;
+<span class="kwrd">using</span> System.Collections;
+<span class="kwrd">using</span> System.Xml;
+<span class="kwrd">using</span> TemplateMaschine;
+
+<span class="kwrd">namespace</span> Sample
+{
+  <span class="kwrd">class</span> SampleDriver2
+  {
+    <span class="kwrd">static</span> <span class="kwrd">void</span> Main(<span class="kwrd">string</span>[] args)
+    {
+      <span class="rem">// Load a template from file 'Sample2.template' and compile it</span>
+      Template myTemplate = <span class="kwrd">new</span> Template(<span class="str">"Sample2.template"</span>);
+
+    <span class="rem">  // Read file 'Config.xml'</span>
+      ArrayList attributes = <span class="kwrd">new</span> ArrayList();
+      XmlDocument document = <span class="kwrd">new</span> XmlDocument();
+      document.Load(<span class="str">"Config.xml"</span>);
+      XmlNode root = document[<span class="str">"classes"</span>];
+      <span class="kwrd">foreach</span> (XmlNode classNode <span class="kwrd">in</span> root.ChildNodes)
+      {
+        <span class="kwrd">string</span> className = classNode.Attributes[<span class="str">"name"</span>].Value;
+        attributes.Clear();
+        <span class="kwrd">foreach</span> (XmlNode attributeNode <span class="kwrd">in</span> classNode.ChildNodes)
+        {
+          <span class="kwrd">string</span> attributeName = attributeNode.Attributes[<span class="str">"name"</span>].Value;
+          attributes.Add(attributeName);
+        }
+        <span class="rem">// process the template with className and attributes arguments</span>
+        <span class="rem">// and write output to file '&lt;classname&gt;.cs'</span>
+        myTemplate.Generate(<span class="kwrd">new</span> <span class="kwrd">object</span>[] { className, attributes }, className + <span class="str">".cs"</span>);
+      }
+    }
+  }
+}
+</pre>
+                    Go to the <a href="dievorlagenmaschine.html#download">[download section]</a> to download the complete source code.
+            </div>
+				<p>After compiling and running the code (e.g. by making corresponding changes to <a href="dievorlagenmaschine.html#download">run.bat</a>), the output looks like this:</p>
+				<div class="codeblock">
+                  File 'Customer.cs':
+                    <pre class="csharpcode">
+<span class="kwrd">class</span> Customer
+{
+    <span class="kwrd">public</span> <span class="kwrd">string</span> name;
+    <span class="kwrd">public</span> <span class="kwrd">string</span> age;
+}
+</pre>
+                  File 'Department.cs':
+                    <pre class="csharpcode">
+<span class="kwrd">class</span> Department
+{
+    <span class="kwrd">public</span> <span class="kwrd">string</span> location;
+}
+</pre>
+                    Go to the <a href="dievorlagenmaschine.html#download">[download section]</a> to download the complete source code.
+                </div>
+
+		    <!-- InstanceEndEditable -->
+            <div class=separator>&nbsp;</div>
+		  <p>[Click <a href="templatemaschine.html">here</a> to return to the main page of this project]</p><div class=separator>&nbsp;</div>
+          <!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat --> 
+		  
+		  </div>
+          <div class="block_footer">
+            <div class="itemdesc">This page was last changed on 
+              <script language="javascript" type="text/javascript">document.write(document.lastModified);</script>
+            </div>
+          </div>
+        </div></td>
+    </tr>
+  </table>
+</DIV>
+</body>
+<!-- InstanceEnd --></html>
