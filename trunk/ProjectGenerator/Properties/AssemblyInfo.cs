@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("ProjectGenerator")]
-[assembly: AssemblyCopyright("Copyright © KINT 2008")]
+[assembly: AssemblyCopyright("Copyright © Paul Lasarev 2008-2009")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
