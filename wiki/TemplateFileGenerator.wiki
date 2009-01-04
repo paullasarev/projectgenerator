@@ -80,7 +80,13 @@ public class <%=className%>
 ===Описание основных видов шаблонов===
 
 ||<%@ Assembly Name="System.Xml" %> ||	references and assembly that can be accessed in the current template ||
-
+||<%@ Import NameSpace="System.Threading" %> ||	imports a namespace for use in the current template||
+||<%@ Argument Name="name" Type="string" %> ||	declares a template parameter called name of type string; parameters must be passed to the generate(...) method and provided there in order of definition in the template.||
+||<%@ Include File="another.template" %> 	||includes a template in the current template; you can therefore better organize your template files||
+||{{{<script runat="template"></script>}}||	defines helper variables and functions that can be called in your template||
+||<% for(int i=0; i<100; i++) { %> ||	introduces a code block in the template which will be executed (don't forget to close braces, e.g. by somewhere later writing "<% } %>")||
+||<%=name%> ||	evaluates expression "name" and writes its result to the output||
+||<% Response.Write("Hello!"); %> ||	directly writes to the output stream, this is sometimes useful ||
 ==Diff/Merge/Patch==
 При использовании генерации возможны ситуации, когда придется ''соединять'' (merge) изменения, сделанные пользователем и сгенерированные автоматические.
 
